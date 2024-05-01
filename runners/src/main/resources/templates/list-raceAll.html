@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{style.css}" rel="stylesheet">
+    <title>Races</title>
+</head>
+<body>
+<style>
+        .detail {
+            background-color: #333333;
+            border-radius: 5px;
+            height: 25px;
+            color: white;
+        }
+        .detail:hover{
+            background-color: black;
+        }
+        table{
+
+            width: 50%;
+            margin-left: 25%;
+        }
+        h2{
+            text-align: center;
+            height: 50px;
+        }
+        td:hover{
+            background-color: #333333;
+        }
+</style>
+    <div>
+        <h2>Races</h2>
+        <hr/>
+        <table>
+            <thead>
+                <tr>
+                    <th>Races</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr  th:each="race : ${race}">
+                <td class="detail" th:text="${race.raceName}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
